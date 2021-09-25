@@ -6,5 +6,7 @@ WORKDIR /docker-flask-test
 ADD . /docker-flask-test
 # run pip to install the dependencies of the flask app
 RUN pip install -r requirements.txt
+# expose a port
+EXPOSE 8080
 # define the command to start the container
 CMD ["python","app.py"]
